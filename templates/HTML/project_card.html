@@ -1,0 +1,31 @@
+<div class="project_card" id="project_card{%||%}">
+  <!-- шапка задачи с кнопками -->
+  <div class="project_and_stage">
+      <!-- Строка с основными атрибутами проекта -->
+      <div class="project_string" onclick="openProjectForm({%||%})">
+          <div class="icon_status" title="{%||%}">
+             <img src="{%||%}" width="25px" height="25px">
+          </div>
+          <h3 class="date_begin_project">{%||%}</h3>
+          <h3 class="name_project">Проект №{%||%}: {%||%}</h3>
+          <h3 class="date_end_project">{%||%}:</h3>
+      </div>
+
+      <!-- Реестр этапов -->
+      <div class="list_stage">
+          {%||%}
+      </div>
+  </div>
+  <!-- Блок с результатами проекта -->
+  <div class="result_project">
+      <div class="line_result_project">
+        <p class="note">{%||%}/{%||%}ч</p>
+      </div>
+      <div class="line_result_project">
+        <p class="note">{%||%}/{%||%}д</p>
+      </div>
+      <div class="line_result_project">
+        <p class="note">{%||%}р</p>
+      </div>
+  </div>
+</div>

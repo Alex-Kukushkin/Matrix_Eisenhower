@@ -1,0 +1,21 @@
+<!-- блок c заголовком реестра и кнопкой создания задачи -->
+<div id="block_header_right_panel">
+  <h2 id="header_right_panel">Реестр задач:</h2>
+</div>
+
+<div id="filters_right_panel">
+
+  <div class="field_task">
+    <select class="input_form" id="select_filter_task" onchange="changeFilterTask('task')"
+            title="Фильтр по статусу задач">
+      {%||%}
+    </select>
+  </div>
+
+  <div class="field_task">
+    <select class="input_form" id="select_filter_project" onchange="changeFilterTask('project')"
+            title="Фильтр по проектам">
+      {%||%}
+    </select>
+  </div>
+</div>

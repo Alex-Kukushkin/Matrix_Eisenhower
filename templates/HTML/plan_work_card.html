@@ -1,0 +1,53 @@
+<div id="plan_work{%||%}" class="{%||%}">
+  <div onclick="openPlanWorkForm({%||%})">
+    <!-- шапка карточки задачи с иконкой статуса и связанным проектом -->
+    <div class="card_task_header">
+      <div class="icon_status_task" title="Новая задача">
+        <img src="{%||%}" width="25px" height="25px">
+      </div >
+
+      <div class="stage_and_project">
+        <p><span>ПРОЕКТ: </span><span>{%||%}</span><br><span>  ЭТАП: </span><span>{%||%}</span></p>
+      </div>
+      <div class="work_time" title="Запланированное время на работу">
+        <div class="content_task2">
+          <p class="text_time">{%||%} час</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- строка с плановыми датами и затратами времени -->
+    <div class="time_line">
+        <p><span>Период: </span><span>{%||%} - </span><span>{%||%}    </span><span>Время: </span><span>{%||%} из </span><span>{%||%}</span></p>
+    </div>
+
+    <!-- содержание задачи -->
+    <div class="content_task">
+      <p class="text_task">Задача №{%||%}: {%||%}</p>
+    </div>
+
+    <!-- содержание планируемой работы -->
+    <div class="content_task2">
+      <p class="text_task">Планируемая работа №{%||%}: {%||%}</p>
+    </div>
+  </div>
+
+  <!-- Кнопки действий по плаируемой работе (появляются при наведении) -->
+  <div class="buttons_card_task">
+    <div class="button_container_card_task" title="Отменить">
+      <button type="button" class="button_task_card" onclick="deletePlanWorkFromRegistry({%||%})">
+        <img src="{%||%}"  width="25px" height="25px">
+      </button>
+    </div>
+    <div class="button_container_card_task" title="Выполнить">
+      <button type="button" class="button_task_card" onclick="do_execution_plan_work({%||%})">
+        <img src="{%||%}"  width="25px" height="25px">
+      </button>
+    </div>
+    <div class="button_container_card_task" title="Отметить время">
+      <button type="button" class="button_task_card" onclick="do_time_stamp_for_plan_work({%||%})">
+        <img src="{%||%}"  width="25px" height="25px">
+      </button>
+    </div>
+  </div>
+</div>

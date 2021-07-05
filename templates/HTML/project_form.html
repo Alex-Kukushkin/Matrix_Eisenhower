@@ -1,0 +1,106 @@
+<!-- шапка проекта с кнопками -->
+<div  id="field_form_task">
+  <div class="block_field block_project" id="header_task">
+    <div id="icon_brand" title="{%||%}">
+      <img src="{%||%}" width="40px" height="40px">
+    </div>
+    <div id="title_container">
+      <h2>Проект № {%||%}</h2>
+    </div>
+    <div class="buttons_block_form" id="block_buttons_general">
+      <div class="button_container" title="Закрыть">
+        <button type="button" class="button_task" onclick="closeProject()">
+          <img src="{%||%}"  width="40px" height="40px">
+        </button>
+      </div>
+
+      <div class="button_container" title="Сохранить">
+        <button type="button" class="button_task" onclick="saveUpdateProject({%||%})">
+          <img src="{%||%}" width="40px" height="40px">
+        </button>
+      </div>
+
+      <div class="button_container" title="Удалить">
+        <button type="button" class="button_task" onclick="{%||%}" name="button_delete" id="button_delete">
+          <img src="{%||%}" width="40px" height="40px">
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- поля диалога проекта -->
+  <!-- блок с наименованием проекта -->
+  <div class="block_field block_project" id="block_type">
+    <textarea id="name_project" rows="2" cols="60" class="label_form"
+     placeholder="Введите наименование проекта"  name="name_project">{%||%}</textarea>
+  </div>
+
+  <!-- блок с датами проекта и затраченным временем -->
+  <div class="block_field block_project" id="block_datetime">
+    <div class="field_task">
+      <label for="date_begin" class="label_form">Дата начала выполнения:</label><br>
+      <input type="date" name="date_begin" value="{%||%}" id="date_begin">
+    </div>
+
+    <div class="field_task">
+      <label for="date_end_plan" class="label_form">Дата окончания выполнения:</label><br>
+      <input type="date" name="date_end_plan" value="{%||%}" id="date_end_plan">
+    </div>
+
+    <div class="field_task">
+      <label for="time_plan" class="label_form">Запланированно (часы):</label><br>
+      <input type="number" value="{%||%}" id="time_plan" name="time_plan">
+    </div>
+  </div>
+
+  <!-- блок с содержанием проекта -->
+  <div class="block_field block_project" id="block_content_task">
+    <textarea id="content_task" name="content_task" rows="8" cols="80" class="label_form"
+      placeholder="Введите содержание проекта" >{%||%}</textarea>
+  </div>
+
+  <h2 id="head_executed">Выполнение проекта:</h2>
+
+  <!-- блок с фактической датой завершения, комментарием о выполнении проекта -->
+  <div class="block_field block_project" id="block_fact">
+    <textarea id="execution_comment" rows="2" cols="60" class="label_form"
+     placeholder="Введите комментарий о выполнении проекта"  name="execution_comment"
+     title="Заполняется при выполнении или отмене задачи">{%||%}</textarea>
+  </div>
+  <div class="block_field block_project" id="block_fact2">
+    <div class="field_task">
+      <label for="date_end_fact" class="label_form" >Дата выполнения:</label><br>
+      <input type="date" name="date_end_fact" value="{%||%}" id="date_end_fact"
+      title="Заполняется при выполнении проекта">
+    </div>
+
+    <div class="field_task">
+      <label for="time_spent" class="label_form">Затраченно (часы):</label><br>
+      <input type="number" value="{%||%}" id="time_spent" name="time_spent" disabled
+      title="Заполняется автоматически на основании отметок времени">
+    </div>
+
+    <div class="buttons_block_form"  id="block_buttons_executed">
+
+      <div class="button_container" title="Реестр отметок">
+        <button type="button" class="button_task" id="button_list_time_spent" onclick="{%||%}">
+          <img src="{%||%}" width="40px" height="40px">
+        </button>
+      </div>
+
+      <div class="button_container" title="Отменить проект">
+        <button type="button" class="button_task" id="button_cancel" onclick="saveUpdateProject({%||%})">
+          <img src="{%||%}" width="40px" height="40px">
+        </button>
+      </div>
+
+      <div class="button_container" title="Завершить проект">
+        <button type="button" class="button_task" id="button_executed" onclick="saveUpdateProject({%||%})">
+          <img src="{%||%}" width="40px" height="40px">
+        </button>
+      </div>
+
+    </div>
+  </div>
+  <input type="number" value="{%||%}" id="status_project" class="status">
+</div>

@@ -1,0 +1,194 @@
+#form_task {
+  position:absolute;
+  top:100px;
+  left:350px;
+  width: 800px;
+  height: 500px;
+  z-index: 8;
+  background: rgba(219, 147, 64, 1.0);
+  border: 5px solid silver;
+  border-radius: 10px;
+}
+
+#header_task {
+  margin-left: 2%;
+  margin-top: 1%;
+  height: 6%;
+  width: 96%;
+  border: 1px solid silver;
+}
+
+#icon_brand {
+  width: 5%;
+  float: left;
+}
+
+#title_container {
+  margin-left: 1%;
+  margin-top: 2%;
+  width: 72%;
+  float: left;
+}
+
+.button_container {
+  margin-left: 5px;
+  margin-right: 5px;
+  float: right;
+}
+
+.button_task {
+    height: 44px;
+    width: 44px;
+    background: rgba(0, 0, 0, 0.0);
+    border: rgba(0, 0, 0, 0.0);
+}
+
+.button_task:hover {
+  border: 2px solid silver;
+  border-radius: 3px;
+}
+
+.button_task:active {
+  border: 3px solid gold;
+  border-radius: 4px;
+
+}
+
+#field_form_task {
+  margin-left: 2%;
+  margin-top: 2%;
+  height: 95%;
+  width: 96%;
+  border: 1px solid silver;
+}
+
+.input_form {
+    background: #ce9a72;
+    font-size: 20px;
+    color: #3e2b1b;
+}
+
+#select_type, #select_project, #select_stage_project {
+    width: 280px;
+}
+
+#date_begin, #date_end_plan, #time_plan, #time_spent, #date_end_fact, #time_input_form, #date_input_form, #time_plan_input_form {
+    width: 280px;
+    background: #ce9a72;
+    font-size: 20px;
+    color: #3e2b1b;
+}
+
+#time_input_form, #date_input_form, #time_plan_input_form {
+  width: 180px;
+}
+
+.label_form {
+    font-size: 18px;
+    color: #3e2b1b;
+}
+
+.block_field {
+    margin-left: 2%;
+    margin-top: 2%;
+    height: 10%;
+    width: 96%;
+    border: 1px solid silver;
+}
+
+.field_task {
+    float: left;
+    margin-top: 5px;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+#content_task, #content_input_form, #execution_comment, #name_project {
+  margin-top: 1%;
+  margin-left: 1%;
+  height: 86%;
+  width: 98%;
+  background: #ce9a72;
+  font-size: 20px;
+  color: #3e2b1b;
+}
+
+ #execution_comment, #name_project  {
+   height: 74%
+ }
+
+#block_content_task {
+    height: 20%;
+}
+
+#head_executed {
+  margin-top: 20px;
+}
+
+#status_task, #status_project {
+  display: none;
+}
+
+.content_line_form {
+  margin-left: 2%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+
+  width: 98%;
+}
+
+.line_form {
+  width: 48%;
+  float: left;
+
+}
+
+#content_task_form {
+  margin-top: 1%;
+  margin-bottom: 1%;
+  font-size: 18px;
+  float: left;
+
+}
+
+#content_task_mini_form {
+  font-size: 16px;
+}
+
+.buttons_block_form {
+  margin-right: 10px;
+  float: right;
+
+}
+
+#block_buttons_executed {
+  margin-top: 17px;
+}
+
+#block_buttons_general, #block_button_create_task {
+  margin-top: 2px;
+}
+
+.area_wish_color1 {
+  background: rgba(227, 2, 6, 0.2);
+}
+
+.area_wish_color2 {
+  background: rgba(12, 196, 24, 0.2);
+}
+
+.area_wish_color3 {
+  background: rgba(227, 141, 2, 0.3);
+}
+
+.area_wish_color4 {
+  background: rgba(227, 2, 208, 0.3);
+}
+
+.block_project {
+  background: rgba(145, 153, 34, 0.5);
+}
+
+
+
+

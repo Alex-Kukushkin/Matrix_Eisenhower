@@ -1,0 +1,33 @@
+<div id="time_stamp{%||%}" class="{%||%}">
+  <div onclick="openTimeStampForm({%||%})">
+    <!-- шапка карточки отметки времени с иконкой статуса задачи и связанными задачей и проектом -->
+    <div class="card_task_header">
+      <div class="icon_status_task" title="{%||%}">
+        <img src="{%||%}" width="25px" height="25px">
+      </div >
+
+      <div class="stage_and_project">
+        <p><span>ПРОЕКТ №{%||%}: </span><span>{%||%}</span><br><span>  ЗАДАЧА №{%||%}: </span><span>{%||%}</span></p>
+      </div>
+    </div>
+
+    <!-- строка с датой отметки времени и затратами времени -->
+    <div class="time_line">
+        <p><span>Дата: </span><span>{%||%}</span>  <span>Затраченное время: </span><span>{%||%}</span></p>
+    </div>
+  </div>
+
+  <!-- содержание выполненных работ -->
+  <div class="content_task">
+    <p class="text_task">Выполненные работы: {%||%}</p>
+  </div>
+
+  <!-- Кнопки действий по задаче (появляются при наведении) -->
+  <div class="buttons_card_task">
+    <div class="button_container_card_task" title="Удалить отметку времени">
+      <button type="button" class="button_task_card" onclick="deleteTimeStamp({%||%})">
+        <img src="{%||%}"  width="25px" height="25px">
+      </button>
+    </div>
+  </div>
+</div>

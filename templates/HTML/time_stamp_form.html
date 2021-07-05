@@ -1,0 +1,80 @@
+<div class="{%||%}">
+  <div class="title_container">
+    <div class="icon_status_task" title="{%||%}">
+      <img src="{%||%}" width="40px" height="40px">
+    </div>
+    <div class="buttons_block_form" id="buttons_up">
+      <div class="button_container" title="Закрыть">
+        <button type="button" class="button_task" onclick="close_mini_form()">
+          <img src="{%||%}"  width="40px" height="40px">
+        </button>
+      </div>
+      <div class="button_container" title="Сохранить">
+        <button type="button" class="button_task" onclick="{%||%}">
+          <img src="{%||%}"  width="40px" height="40px">
+        </button>
+      </div>
+      <div class="button_container" title="Удалить">
+        <button type="button" class="button_task" onclick="{%||%}">
+          <img src="{%||%}"  width="40px" height="40px">
+        </button>
+      </div>
+    </div>
+    <h1>Отметка времени №{%||%}</h1>
+  </div>
+
+  <div class="block_field" id="info_container_form">
+    <!-- шапка карточки задачи с иконкой статуса и связанным проектом -->
+    <div class="content_line_form">
+      <div class="line_form">
+        <p><span>ПРОЕКТ: </span><span>{%||%}</span></p>
+      </div>
+      <div class="line_form">
+        <p><span>ЭТАП: </span><span>{%||%}</span></p>
+      </div>
+    </div>
+
+    <!-- строка с плановыми датами и затратами времени -->
+    <div class="content_line_form">
+      <div class="line_form">
+        <p><span>Период: </span><span>{%||%} - </span><span>{%||%}</span></p>
+      </div>
+      <div class="line_form">
+        <p><span>Время: </span><span>{%||%} из </span><span>{%||%}</span></p>
+      </div>
+    </div>
+
+    <!-- содержание задачи -->
+    <div class="content_task">
+      <p class="text_task"  id="content_task_mini_form">Задача №{%||%}: {%||%}</p>
+    </div>
+  </div>
+
+  <h2 id="head_executed">Дата и время выполняемой работы по задаче:</h2>
+
+  <div class="block_field" id="block_fact">
+    <div class="field_task">
+      <label for="date_input_form" class="label_form" >Дата работы:</label>
+      <input type="date" name="date_input_form" value="{%||%}" id="date_input_form"
+      title="Дата выполнения работ по задаче">
+    </div>
+
+    <div class="field_task">
+      <label for="time_input_form" class="label_form">Время работы (часы):</label>
+      <input type="number" value="{%||%}" id="time_input_form" name="time_input_form"
+      title="Время выполнения работы по задаче">
+    </div>
+  </div>
+
+  <h2 id="head_executed2">Содержание выполненной работы по задаче:</h2>
+
+  <!-- блок с содержанием задачи -->
+  <div class="block_field" id="block_content_task">
+    <textarea id="content_input_form" name="content_input_form" rows="4" cols="80" class="label_form"
+      placeholder="Введите содержание выполненной работы" >{%||%}</textarea>
+  </div>
+
+  <div class="buttons_block_form" id="buttons_down">
+
+  </div>
+</div>

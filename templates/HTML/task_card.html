@@ -1,0 +1,46 @@
+<div id="task{%||%}" class="{%||%}">
+  <div onclick="openTaskForm({%||%})">
+    <!-- шапка карточки задачи с иконкой статуса и связанным проектом -->
+    <div class="card_task_header">
+      <div class="icon_status_task" title="{%||%}">
+        <img src="{%||%}" width="25px" height="25px">
+      </div >
+
+      <div class="stage_and_project">
+        <p><span>ПРОЕКТ: </span><span>{%||%}</span><br><span>  ЭТАП: </span><span>{%||%}</span></p>
+      </div>
+    </div>
+
+    <!-- строка с плановыми датами и затратами времени -->
+    <div class="time_line">
+        <p><span>Период: </span><span>{%||%} - </span><span>{%||%}    </span><span>Время: </span><span>{%||%} из </span><span>{%||%}</span></p>
+    </div>
+  </div>
+
+  <!-- содержание задачи -->
+  <div class="content_task">
+    <p class="text_task">Задача №{%||%}: {%||%}</p>
+  </div>
+
+  <!-- Кнопки действий по задаче (появляются при наведении) -->
+  <div class="buttons_card_task">
+    <div class="button_container_card_task" title="Отметить время">
+      <button type="button" class="button_task_card" onclick="openNewTimeStampForm({%||%})">
+        <img src="{%||%}"  width="25px" height="25px">
+      </button>
+    </div>
+
+    <div class="button_container_card_task" title="Запланировать">
+      <button type="button" class="button_task_card" onclick="openNewPlanWorkForm({%||%})">
+        <img src="{%||%}"  width="25px" height="25px">
+      </button>
+    </div>
+
+    <div class="button_container_card_task" title="Реестр отметок">
+      <button type="button" class="button_task_card" onclick="drawListTimeStamp('task', {%||%})">
+        <img src="{%||%}"  width="25px" height="25px">
+      </button>
+    </div>
+
+  </div>
+</div>

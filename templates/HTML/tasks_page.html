@@ -1,0 +1,144 @@
+<!-- шапка задачи с кнопками -->
+<div  id="field_form_task">
+  <div class="area_wish_color" id="header_task">
+    <div id="icon_brand" title="Новая задача">
+      <img src="https://cdn3.iconfinder.com/data/icons/ikooni-flat-online-shopping/128/shopping-16-512.png" width="40px" height="40px">
+    </div>
+    <div id="title_container">
+      <h2>Задача №</h2>
+    </div>
+    <div class="buttons_block_form" id="block_buttons_general">
+      <div class="button_container" title="Закрыть">
+        <button type="button" class="button_task" onclick="defaultFieldTask()">
+          <img src="https://www.pngkey.com/png/full/19-190511_red-cross-x-clip-art-error-icon-transparent.png"  width="40px" height="40px">
+        </button>
+      </div>
+
+      <div class="button_container" title="Сохранить">
+        <button type="button" class="button_task" onclick="newTaskRequest()">
+          <img src="https://nskphone.ru/upload/medialibrary/d48/d48e3323eeaa7e4def207778d5d86bdd.png" width="40px" height="40px">
+        </button>
+      </div>
+
+      <div class="button_container" title="Удалить">
+        <button type="button" class="button_task" onclick="newTaskRequest()" name="button_delete" id="button_delete">
+          <img src="https://cdn2.iconfinder.com/data/icons/round-interface-1/217/50-512.png" width="40px" height="40px">
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- поля диалога задачи -->
+  <!-- блок с типом задачи и ссылками на проекты -->
+  <div class="block_field area_wish_color" id="block_type">
+    <div class="field_task">
+      <label for="select_type" class="label_form">Срочность-важность задачи:</label><br>
+      <select class="input_form" id="select_type" name="select_type" onchange="changeTypeTack()">
+        <option value="1">"A" Срочная важная</option>
+        <option value="2">"B" Несрочная важная</option>
+        <option value="3">"C" Срочная неважная</option>
+        <option value="4">"D" Несрочная неважная</option>
+      </select>
+    </div>
+
+    <div class="field_task">
+      <label for="select_project" class="label_form">Проект:</label><br>
+      <select class="input_form" id="select_project" name="select_project">
+        <option value="0">-</option>
+        <option value="1">Project1</option>
+        <option value="2">Project2</option>
+        <option value="3">Project3</option>
+      </select>
+    </div>
+
+    <div class="field_task">
+      <label for="select_stage_project" class="label_form">Этап проекта:</label><br>
+      <select class="input_form" id="select_stage_project" name="select_stage_project">
+        <option value="0">-</option>
+        <option value="1">Stage1</option>
+        <option value="2">Stage2</option>
+        <option value="3">Stage3</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- блок с датами задачи и затраченным временем -->
+  <div class="block_field area_wish_color" id="block_datetime">
+    <div class="field_task">
+      <label for="date_begin" class="label_form">Дата начала выполнения:</label><br>
+      <input type="date" name="date_begin" value="" id="date_begin">
+    </div>
+
+    <div class="field_task">
+      <label for="date_end_plan" class="label_form">Дата окончания выполнения:</label><br>
+      <input type="date" name="date_end_plan" value="" id="date_end_plan">
+    </div>
+
+    <div class="field_task">
+      <label for="time_plan" class="label_form">Запланированно (часы):</label><br>
+      <input type="number" value="1" id="time_plan" name="time_plan">
+    </div>
+  </div>
+
+  <!-- блок с содержанием задачи -->
+  <div class="block_field area_wish_color" id="block_content_task">
+    <textarea id="content_task" name="content_task" rows="8" cols="80" class="label_form"
+      placeholder="Введите содержание задачи" ></textarea>
+  </div>
+
+  <h2 id="head_executed">Выполнение задачи:</h2>
+
+  <!-- блок с фактической датой завершения, комментарием о выполнении задачи -->
+  <div class="block_field" id="block_fact">
+    <textarea id="execution_comment" rows="2" cols="60" class="label_form"
+     placeholder="Введите комментарий о выполнении задачи"  name="execution_comment"
+     title="Заполняется при выполнении или отмене задачи"></textarea>
+  </div>
+  <div class="block_field area_wish_color" id="block_fact2">
+    <div class="field_task">
+      <label for="date_end_fact" class="label_form" >Дата выполнения:</label><br>
+      <input type="date" name="date_end_fact" value="" id="date_end_fact"
+      title="Заполняется при выполнении задачи">
+    </div>
+
+    <div class="field_task">
+      <label for="time_spent" class="label_form">Затраченно (часы):</label><br>
+      <input type="number" value="0" id="time_spent" name="time_spent" disabled
+      title="Заполняется автоматически на основании отметок времени">
+    </div>
+
+    <div class="buttons_block_form"  id="block_buttons_executed">
+      <div class="button_container" title="Отметка времени">
+        <button type="submit" class="button_task" id="button_time_spent">
+          <img src="https://espa72.ru/img/coaches/coaches2.png" width="40px" height="40px">
+        </button>
+      </div>
+
+      <div class="button_container" title="Реестр отметок">
+        <button type="submit" class="button_task" id="button_list_time_spent">
+          <img src="https://cdn4.iconfinder.com/data/icons/ios7-active-2/512/Management.png" width="40px" height="40px">
+        </button>
+      </div>
+
+      <div class="button_container" title="Запланировать работу">
+        <button type="submit" class="button_task" id="button_time_plan">
+          <img src="https://opt-stroymarket.ru/files/image/%D0%9D%D0%BE%D0%B2%D0%B0%D1%8F%D0%9F%D0%B0%D0%BF%D0%BA%D0%B0/Scheduling-Icon.png" width="40px" height="40px">
+        </button>
+      </div>
+
+      <div class="button_container" title="Отменить задачу">
+        <button type="submit" class="button_task" id="button_cancel">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Simple_Prohibited.svg/1200px-Simple_Prohibited.svg.png" width="40px" height="40px">
+        </button>
+      </div>
+
+      <div class="button_container" title="Выполнить задачу">
+        <button type="submit" class="button_task" id="button_executed">
+          <img src="https://al-teh.ru/wa-data/public/shop/img/reshenie-green.png" width="40px" height="40px">
+        </button>
+      </div>
+
+    </div>
+  </div>
+  <input type="number" value="0" id="status_task" class="status">
+</div>

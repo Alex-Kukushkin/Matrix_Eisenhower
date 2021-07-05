@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Alex Kukushkin">
+    <meta name="description" content="Task scheduler based on the Eisenhower matrix">
+    <meta name="keywords" content="The task scheduler">
+    <title>MatrixEisenhower</title>
+    <link rel="icon" href="ASSETS/matrix_icon_io2/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="CSS/main.css">
+    <link rel="stylesheet" href="CSS/task.css">
+</head>
+<body>
+    <div id="content">
+
+      <div class="panel" id="header">
+        <noscript>
+          Включите javascript
+        </noscript>
+        <img id="mark" src="C:\Users\я\Desktop\socket\templates\ASSETS\matrix_icon2.png" width="40px" height="40px">
+        {% block content_header %}
+        {% endblock %}
+        <a href="/Schedule" title="Расписание">На главную</a><br>
+      </div>
+
+      <div class="panel" id="main_panel">
+        {% block content_main %}
+        {% endblock %}
+      </div>
+
+      <div class="panel" id="right_panel">
+        {% block content_right_panel %}
+        {% endblock %}
+      </div>
+
+      <div class="panel" id="footer">
+        {% block content_footer %}
+        {% endblock %}
+      </div>
+
+    </div>
+    <div id="scope_task_form">
+      <div id="form_task">
+
+
+
+        <div id="header_task">
+          <div id="icon_brand">
+            <img src="./ASSETS/matrix_icon2.png" width="40px" height="40px">
+          </div>
+          <div id="title_container">
+            <h2>Задача №</h2>
+          </div>
+
+          <div class="button_container" title="Закрыть">
+            <img src="{% static 'main_me/assets/close_img.png' %}"  width="40px" height="40px"
+            onclick="close_task()" class="button_task" >
+          </div>
+          <div class="button_container" title="Сохранить">
+            <img src="{% static 'main_me/assets/ok_img.png' %}" width="40px" height="40px"  class="button_task">
+          </div>
+          <div class="button_container" title="Удалить">
+            <img src="{% static 'main_me/assets/delete_img.png' %}" width="40px" height="40px"  class="button_task">
+          </div>
+
+
+        </div>
+        <form id="field_form_task" action="index.html" method="post">
+          {% csrf_token %}
+
+          <select class="" name="">
+            <option value="">"A" Срочная важная</option>
+            <option value="">"B" Несрочная важная</option>
+            <option value="">"C" Срочная неважная</option>
+            <option value="">"D" Несрочная неважная</option>
+
+          </select>
+            <input type="date">
+        </form>
+
+      </div>
+    </div>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

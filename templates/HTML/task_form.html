@@ -1,0 +1,138 @@
+<!-- шапка задачи с кнопками -->
+<div  id="field_form_task">
+  <div class="{%||%}" id="header_task">
+    <div id="icon_brand" title="{%||%}">
+      <img src="{%||%}" width="40px" height="40px">
+    </div>
+    <div id="title_container">
+      <h2>Задача №{%||%}</h2>
+    </div>
+    <div class="buttons_block_form" id="block_buttons_general">
+      <div class="button_container" title="Закрыть">
+        <button type="button" class="button_task" onclick="openTaskForm(0)">
+          <img src="{%||%}"  width="40px" height="40px">
+        </button>
+      </div>
+
+      <div class="button_container" title="Сохранить">
+        <button type="button" class="button_task" onclick="newTaskRequest({%||%})">
+          <img src="{%||%}" width="40px" height="40px">
+        </button>
+      </div>
+
+      <div class="button_container" title="Удалить">
+        <button type="button" class="button_task" onclick="deleteTask({%||%})" name="button_delete" id="button_delete">
+          <img src="{%||%}" width="40px" height="40px">
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- поля диалога задачи -->
+  <!-- блок с типом задачи и ссылками на проекты -->
+  <div class="{%||%}" id="block_type">
+    <div class="field_task">
+      <label for="select_type" class="label_form">Срочность-важность задачи:</label><br>
+      <select class="input_form" id="select_type" name="select_type"  onchange="changeTypeTack()">
+        {%||%}
+      </select>
+    </div>
+
+    <div class="field_task">
+      <label for="select_project" class="label_form">Проект:</label><br>
+      <select class="input_form" id="select_project" name="select_project">
+        <option value="0">-</option>
+        {%||%}
+      </select>
+    </div>
+
+    <div class="field_task">
+      <label for="select_stage_project" class="label_form">Этап проекта:</label><br>
+      <select class="input_form" id="select_stage_project" name="select_stage_project">
+        <option value="0">-</option>
+        {%||%}
+      </select>
+    </div>
+  </div>
+
+  <!-- блок с датами задачи и затраченным временем -->
+  <div class="{%||%}" id="block_datetime">
+    <div class="field_task">
+      <label for="date_begin" class="label_form">Дата начала выполнения:</label><br>
+      <input type="date" name="date_begin" value="{%||%}" id="date_begin">
+    </div>
+
+    <div class="field_task">
+      <label for="date_end_plan" class="label_form">Дата окончания выполнения:</label><br>
+      <input type="date" name="date_end_plan" value="{%||%}" id="date_end_plan">
+    </div>
+
+    <div class="field_task">
+      <label for="time_plan" class="label_form">Запланированно (часы):</label><br>
+      <input type="number" value="{%||%}" id="time_plan" name="time_plan">
+    </div>
+  </div>
+
+  <!-- блок с содержанием задачи -->
+  <div class="{%||%}" id="block_content_task">
+    <textarea id="content_task" name="content_task" rows="8" cols="80" class="label_form"
+      placeholder="Введите содержание задачи" >{%||%}</textarea>
+  </div>
+
+  <h2 id="head_executed">Выполнение задачи:</h2>
+
+  <!-- блок с фактической датой завершения, комментарием о выполнении задачи -->
+  <div class="{%||%}" id="block_fact">
+    <textarea id="execution_comment" rows="2" cols="60" class="label_form"
+     placeholder="Введите комментарий о выполнении задачи"  name="execution_comment"
+     title="Заполняется при выполнении или отмене задачи">{%||%}</textarea>
+  </div>
+  <div class="{%||%}" id="block_fact2">
+    <div class="field_task">
+      <label for="date_end_fact" class="label_form" >Дата выполнения:</label><br>
+      <input type="date" name="date_end_fact" value="{%||%}" id="date_end_fact"
+      title="Заполняется при выполнении задачи">
+    </div>
+
+    <div class="field_task">
+      <label for="time_spent" class="label_form">Затраченно (часы):</label><br>
+      <input type="number" value="{%||%}" id="time_spent" name="time_spent" disabled
+      title="Заполняется автоматически на основании отметок времени">
+    </div>
+
+    <div class="buttons_block_form"  id="block_buttons_executed">
+      <div class="button_container" title="Отметка времени">
+        <button type="button" class="button_task" id="button_time_spent" onclick="openNewTimeStampForm({%||%})">
+          <img src="{%||%}" width="40px" height="40px">
+        </button>
+      </div>
+
+      <div class="button_container" title="Реестр отметок">
+        <button type="button" class="button_task" id="button_list_time_spent" onclick="drawListTimeStamp('task', {%||%})">
+          <img src="{%||%}" width="40px" height="40px">
+        </button>
+      </div>
+
+      <div class="button_container" title="Запланировать работу">
+        <button type="button" class="button_task" id="button_time_plan" onclick="openNewPlanWorkForm({%||%})">
+          <img src="{%||%}" width="40px" height="40px">
+        </button>
+      </div>
+
+      <div class="button_container" title="Отменить задачу">
+        <button type="submit" class="button_task" id="button_cancel" onclick="newTaskRequest({%||%}, 3)">
+          <img src="{%||%}" width="40px" height="40px">
+        </button>
+      </div>
+
+      <div class="button_container" title="Выполнить задачу">
+        <button type="submit" class="button_task" id="button_executed" onclick="newTaskRequest({%||%}, 2)">
+          <img src="{%||%}" width="40px" height="40px">
+        </button>
+      </div>
+
+    </div>
+  </div>
+  <input type="number" value="{%||%}" id="status_task" class="status">
+  <div id="task_form{%||%}"></div>
+</div>

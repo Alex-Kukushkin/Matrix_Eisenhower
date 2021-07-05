@@ -1,0 +1,16 @@
+<!-- блок с наименованием реестра, фильтром и кнопкой создания нового проекта -->
+<div id="block_header_project_panel">
+  <h2 id="header_projects_panel">Реестр проектов:</h2>
+  <div class="field_task">
+    <select class="input_form" id="select_filter_status_projects" onchange="changeFilterProjects()">
+      {%||%}
+    </select>
+  </div>
+  <div class="buttons_block_form" id="block_button_create_task">
+    <div class="button_container" title="Создать проект">
+      <button type="button" class="button_task" onclick="openProjectForm()">
+        <img src="{%||%}"  width="40px" height="40px">
+      </button>
+    </div>
+  </div>
+</div>
